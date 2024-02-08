@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-5imp3fmc%my8e4h!@-0jf%eja)b8wg55#uxm1*4na^w!#54i*9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['restaurante-ci-cd.onrender']
 
 
 # Application definition
