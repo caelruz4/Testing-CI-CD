@@ -1,0 +1,17 @@
+name: Pruebas Restaurante
+
+on: push
+
+jobs:
+    test_project:
+        runs-on: ubuntu-latest
+
+        steps: 
+        - uses:  actions/checkout@v2
+
+        - name: Testear el proyecto en un servidor de prueba.
+          run: |
+            pip3 install --user django
+            python3 manage.py test
+
+        
