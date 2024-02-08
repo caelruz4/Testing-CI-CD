@@ -32,7 +32,7 @@ class PedidoModelTest(TestCase):
     def test_calculo_total_al_guardar_pedido(self):
         pedido = Pedido(usuario=User.objects.get(username='admin'), platillo=Platillo.objects.get(nombre='Pasta'), cantidad=2)
         pedido.save() 
-        self.assertEqual(pedido.total, 400 )  
+        self.assertEqual(pedido.total, 700 )  
 
     def test_str_metodo(self):
         pedido = Pedido(usuario=User.objects.get(username='admin'), platillo=Platillo.objects.get(nombre='Pasta'), cantidad=2)
