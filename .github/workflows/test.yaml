@@ -12,6 +12,7 @@ jobs:
         - name: Testear el proyecto en un servidor de prueba.
           run: |
             pip3 install --user django
+            pip3 install -r requirements.txt
             python3 manage.py test
 
         
