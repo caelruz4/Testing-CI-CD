@@ -9,7 +9,7 @@ class Platillo(models.Model):
     precio = models.DecimalField(max_digits=8, decimal_places=2, blank=False, null=False)
 
     def clean(self):
-        # Agrega validaciones personalizadas para el modelo Platillo
+        # Agregamos validaciones personalizadas para el modelo Platillo
         if self.precio <= 0:
             raise ValidationError("El precio debe ser mayor que cero.")
 
@@ -29,7 +29,7 @@ class Pedido(models.Model):
 
     def save(self, *args, **kwargs):
         # Calcula el total antes de guardar el pedido
-        self.total = self.platillo.precio * self.cantidad
+        self.total = self.platillo.precio + self.cantidad
         super().save(*args, **kwargs)
 
     def __str__(self):
