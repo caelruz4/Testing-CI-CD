@@ -29,7 +29,7 @@ class Pedido(models.Model):
 
     def save(self, *args, **kwargs):
         # Calcula el total antes de guardar el pedido
-        self.total = self.platillo.precio + self.cantidad
+        self.total = self.platillo.precio * self.cantidad
         super().save(*args, **kwargs)
 
     def __str__(self):
